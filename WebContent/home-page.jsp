@@ -90,7 +90,7 @@
 
   <!--navigation bar-->
   
-<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #8e2de2, #4a00e0);">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #ffe000, #799f0c);">
  
   <a class="navbar-brand" href="/real-estate-management-system/">EstateMatrix</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -108,6 +108,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="/real-estate-management-system/new">Sell Now</a>
       </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="/real-estate-management-system/list">DashBoard</a>
+      </li>
       <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Properties
@@ -124,6 +127,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="/real-estate-management-system/contact">Contact us</a>
       </li>
+
     </ul>
    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Logout</button>
   </div>
@@ -141,7 +145,7 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img style="height:700px;" src="https://media.daft.ie/eyJidWNrZXQiOiJtZWRpYW1hc3Rlci1zM2V1IiwiZWRpdHMiOnsicmVzaXplIjp7ImZpdCI6ImNvdmVyIiwid2lkdGgiOjcyMCwiaGVpZ2h0Ijo0ODB9fSwib3V0cHV0Rm9ybWF0IjoianBlZyIsImtleSI6IjEvMC8xMDExYmVjNjBjODZiYzRhOTMxMDVjOThlZmJiYTU4Zi5qcGcifQ==?signature=07eb8ae425d2ad8d82c7b3771daf6fa0348df3bcee1f62689dba7e9874db41e5" class="d-block w-100" alt="Image 1">
+      <img style="height:700px;" src="https://free4kwallpapers.com/uploads/originals/2015/10/05/green-land-hd-wallpaper.jpg" class="d-block w-100" alt="Image 1">
       <div class="carousel-caption">
         <h1>WE ARE EstateMatriX</h3>
         <p>Find your dream state with us.</p>
@@ -149,7 +153,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img style="height: 700px;" src="https://media.istockphoto.com/id/511061090/photo/business-office-building-in-london-england.jpg?s=612x612&w=0&k=20&c=nYAn4JKoCqO1hMTjZiND1PAIWoABuy1BwH1MhaEoG6w=" class="d-block w-100" alt="Image 2">
+      <img style="height: 700px;" src="https://wallpaperswide.com/download/apartment_buildings-wallpaper-2560x1440.jpg" class="d-block w-100" alt="Image 2">
       <div class="carousel-caption">
         <h1>WE ARE EstateMatriX</h3>
         <p>Find your dream state with us.</p>
@@ -157,7 +161,7 @@
       </div>
     </div>
     <div class="carousel-item">
-      <img style="height: 700px;" src="https://cdn.pixabay.com/photo/2018/11/06/22/29/land-3799279_640.jpg" class="d-block w-100" alt="Image 3">
+      <img style="height: 700px;" src="https://wallpapers.com/images/featured/apartment-bbiy2mat3yd31d3t.jpg" class="d-block w-100" alt="Image 3">
       <div class="carousel-caption">
         <h1>WE ARE EstateMatriX</h3>
         <p>Find your dream state with us.</p>

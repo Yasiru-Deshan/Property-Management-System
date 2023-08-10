@@ -29,9 +29,28 @@ public class HomeServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String action = request.getServletPath();
+
+        try {
+            switch (action) {
+            
+                case "/home":
+                    homePage(request, response);
+                    break;
+            
+             
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+	}
+	
+	 private void homePage(HttpServletRequest request, HttpServletResponse response)
+	            throws ServletException, IOException {
 	        RequestDispatcher dispatcher = request.getRequestDispatcher("home-page.jsp");
 	        dispatcher.forward(request, response);
-	}
+	    }
+	    
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

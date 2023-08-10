@@ -91,7 +91,7 @@
 <body>
 
 
-<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #8e2de2, #4a00e0);">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #ffe000, #799f0c);">
  
   <a class="navbar-brand" href="/real-estate-management-system/">EstateMatrix</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -138,7 +138,7 @@
 
     <div class="carousel-inner">
         <div class="carousel-item active">
-          <img style="height:600px;" src="https://www.inca-accountants.co.uk/wp-content/uploads/2016/12/house-for-sale.jpg" class="d-block w-100" alt="Image 1">
+          <img style="height:600px;" src="https://wallpapercave.com/wp/wp7362561.jpg" class="d-block w-100" alt="Image 1">
           <div class="carousel-caption">
             <h1>Sell Property</h3> 
           </div>
@@ -167,7 +167,8 @@
     <br><br>
     <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque eveniet nobis, dolor ipsum culpa accusamus in consectetur quibusdam natus, assumenda pariatur placeat quasi at nostrum nisi veritatis deserunt magnam dolorum.<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat non veniam adipisci quo dolorem optio iure? Dignissimos laborum perferendis ab nulla quos, blanditiis, unde iste itaque fuga facilis sunt adipisci!<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, harum odit? Deleniti, consectetur non laudantium facilis iste quibusdam culpa! Delectus maiores optio dolorem provident assumenda sapiente expedita recusandae eligendi ratione.<br><br></p>
 
-    
+    <div class="container">
+    <div style="margin-top: 40px; margin-bottom: 40px;" class="row">
             <form action="insert" method="post">
        
         
@@ -198,9 +199,9 @@
     <label for="description">Description:</label>
     <textarea id="description" name="description" required>${property.description}</textarea><br>
 
-    <button type="submit" class="btn btn-success">Save</button>
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Save</button>
     </form>
-
+</div></div>
     <br><br>
 </div>
 

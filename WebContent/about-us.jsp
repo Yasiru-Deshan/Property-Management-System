@@ -86,7 +86,7 @@
 
 
   <!--navigation bar-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #8e2de2, #4a00e0);">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #ffe000, #799f0c);">
  
   <a class="navbar-brand" href="/real-estate-management-system/">EstateMatrix</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -158,7 +158,9 @@
     <div class="row">
       <div class="col-md-4 mb-4">
         <div class="card h-100">
-          <img style="height: 150px; width: 150px;" src="images/about.2.png" class="card-img-top" alt="About Us"> 
+        <center>
+           <img style="height: 150px; width: 150px;" src="https://www.freeiconspng.com/uploads/about-us-icon-29.png" class="card-img-top" alt="About Us"> 
+       </center>
           <div class="card-body">
             <h5 class="card-title">About Us</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor turpis in dui consequat faucibus.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, animi. Repellat impedit eligendi odit culpa, reiciendis ducimus animi consequuntur accusantium maiores soluta dolores porro repellendus quod repudiandae inventore nisi ea.<br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi numquam sed architecto optio nisi quidem excepturi, maiores quis laudantium ea perferendis, harum molestiae eos fugiat rem error earum aliquam! Vitae.</p>
@@ -167,7 +169,9 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100">
-          <img style="height: 150px; width: 150px;" src="images/about.3.png" class="card-img-top" alt="Mission">
+        
+        <center> <img style="height: 150px; width: 150px;" src="https://www.ulutrading.com/upload/galeri/our-vision.png" class="card-img-top" alt="Mission">
+         </center>
           <div class="card-body">
             <h5 class="card-title">Our Vission</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor turpis in dui consequat faucibus.<br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. At harum distinctio excepturi nesciunt ab dolores fugit neque blanditiis debitis dolorum, quas fugiat maiores totam reiciendis aperiam? Maxime cum ex dolorum.,<br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores eaque fuga officia facere ratione consequatur. Odio maxime facilis aperiam dignissimos repellendus in a explicabo est, dolores doloremque, eos eaque fugiat.</br></p>
@@ -176,8 +180,9 @@
       </div>
       <div class="col-md-4 mb-4">
         <div class="card h-100">
-          <img style="height: 150px; width: 150px;" src="images/about.4.png" class="card-img-top" alt="Goals">
-          <div class="card-body">
+        <center>  <img style="height: 150px; width: 150px;" src="https://bpa.org/wp-content/uploads/2019/01/target-mission-vision-icon-RED-BLUE.svg" class="card-img-top" alt="Goals">
+       </center>
+           <div class="card-body">
             <h5 class="card-title">Our Mission</h5>
             <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor turpis in dui consequat faucibus.<br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius eum quod illo quisquam. Tempore ex similique mollitia facilis numquam. Architecto iusto veritatis, veniam sapiente commodi impedit. Id perspiciatis explicabo fugiat?<br>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores deleniti consequuntur, delectus, voluptate, perferendis maiores repudiandae exercitationem dignissimos magnam vero culpa sint atque praesentium soluta excepturi sit voluptatem ab laboriosam.</p>
           </div>

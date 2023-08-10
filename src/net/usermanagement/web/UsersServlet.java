@@ -40,7 +40,7 @@ public class UsersServlet extends HttpServlet {
         try {
             switch (action) {
             
-                case "/signup":
+                case "/":
                     signUpPage(request, response);
                     break;
                 case "/add":
