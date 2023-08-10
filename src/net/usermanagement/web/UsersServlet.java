@@ -45,6 +45,10 @@ public class UsersServlet extends HttpServlet {
                     break;
                 case "/add":
                 	insertUser(request, response);
+                case "/login":
+                	loginPage(request, response);
+                case "/alogin":
+                	adminLoginPage(request, response);
                 default:
                     
                     break;
@@ -74,6 +78,19 @@ public class UsersServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("signup.jsp");
         dispatcher.forward(request, response);
     }
+	
+	private void loginPage(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+        dispatcher.forward(request, response);
+    }
+	
+	private void adminLoginPage(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        RequestDispatcher dispatcher = request.getRequestDispatcher("login-admin.jsp");
+        dispatcher.forward(request, response);
+    }
+	
 	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
