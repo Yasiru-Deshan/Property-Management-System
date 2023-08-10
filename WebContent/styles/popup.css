@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding-inline-start: 0;
+    font-family: sans-serif;
+    background: linear-gradient(#e0eafc, #CFDEF3);
+    height: 100vh;
+}
+
+.center,.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+click.me{
+    display: block;
+}
