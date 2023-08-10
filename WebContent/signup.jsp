@@ -91,31 +91,14 @@
 
   <!--navigation bar-->
  
-<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #ffe000, #799f0c);">
+<nav class="navbar navbar-expand-lg navbar-dark" style=" background: linear-gradient(to left, #fdfc47, #24fe41);">
  
   <a class="navbar-brand" href="/real-estate-management-system/">EstateMatrix</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/real-estate-management-system/home">Home</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/real-estate-management-system/services">Services</a>
-      </li>
-    
-      <li class="nav-item active">
-        <a class="nav-link" href="/real-estate-management-system/about">About Us</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/real-estate-management-system/contact">Contact us</a>
-      </li>
-    </ul>
-   
-  </div>
+
 </nav>
 
 </body>
@@ -129,7 +112,7 @@
   </div>
   <div style="margin-top:70px; margin-bottom:60px; background-color:#E9EAED ;" class="col-4">
     <div style="margin-bottom: 50px;" class="container">
-  <h2 style="padding:30px;" class="text-center mb-4">Sign In</h2>
+  <h2 style="padding:30px;" class="text-center mb-4">Sign Up</h2>
  <form action="add" method="post">
 
     <div class="form-group">

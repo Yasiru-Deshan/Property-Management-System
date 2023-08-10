@@ -25,7 +25,7 @@
 <body>
 
     <!--navigation bar-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #ffe000, #799f0c);">
+<nav class="navbar navbar-expand-lg navbar-dark" style=" background: linear-gradient(to left, #fdfc47, #24fe41);">
  
   <a class="navbar-brand" href="/real-estate-management-system/">EstateMatrix</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,9 +40,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="/real-estate-management-system/services">Services</a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/real-estate-management-system/new">Sell Now</a>
-      </li>
+    
       <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Properties

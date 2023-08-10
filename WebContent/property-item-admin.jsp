@@ -1,16 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    
-    
-
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="styles/contactus.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Property Details</title>
+    <!-- Include your CSS and JavaScript dependencies here -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -20,11 +17,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-***" crossorigin="anonymous" />
-
+    
 </head>
 <body>
 
-    <!--navigation bar-->
 <nav class="navbar navbar-expand-lg navbar-dark" style=" background: linear-gradient(to left, #fdfc47, #24fe41);">
  
   <a class="navbar-brand" href="/real-estate-management-system/">EstateMatrix</a>
@@ -53,79 +49,66 @@
   </div>
 </nav>
 
-<!--navigation bar end-->
+    <!-- Retrieve property details using the id parameter -->
+    <%
+        String idParam = request.getParameter("id");
+        if (idParam != null && !idParam.isEmpty()) {
+            int propertyId = Integer.parseInt(idParam);
+            // Use propertyId to retrieve property details from your database
+            // For example: Property property = propertyDAO.selectProperty(propertyId);
+    %>
 
-<!-- Slide start-->
-
-<c:choose>
-        <c:when test="${category == 'Apartment'}">
-         <center>   <h1>Apartments</h1>
-         
-<div class="carousel-inner">
-    <div class="carousel-item active">
-    <img style="height:600px;" src="https://www.phillyaptrentals.com/wp-content/uploads/2020/12/apartment-building-what-makes-good-apartment-building-scaled.jpg" class="d-block w-100" alt="Image 1">
-   
-</div></center>
-        </c:when>
-        <c:when test="${category == 'Building'}">
-         <center>    <h1>Buildings</h1>
-         
-<div class="carousel-inner">
-    <div class="carousel-item active">
-    <img style="height:600px;" src="https://www.shutterstock.com/image-photo/modern-city-illustration-isolated-white-260nw-1836519439.jpg" class="d-block w-100" alt="Image 1">
-   
-</div></center>
-        </c:when>
-        <c:when test="${category == 'Land'}">
-         <center>    <h1>Lands</h1>
-         <div class="carousel-inner">
-    <div class="carousel-item active">
-    <img style="height:600px;" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" class="d-block w-100" alt="Image 1">
-   
-</div></center>
-        </c:when>
-        <c:otherwise>
-          <center>   <h1>My Properties</h1></center>
-       
-        </c:otherwise>
-    </c:choose>
-
-
-<div class="container">
-
-<center>
-
-  <form action="/real-estate-management-system/search" method="get" class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2 " type="search" placeholder="Search by Address" name="address" aria-label="Search">
-    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-</form></center>
-
-    <div style="margin-top: 40px; margin-bottom: 40px;" class="row">
-        <c:forEach var="property" items="${propertyList}">
-            <div class="col-md-4">
-                <div class="card" style="margin-top: 20px;">
-                    <img style="height: 250px;" src="${property.image}" class="card-img-top" alt="Property Image">
-                    <div class="card-body">
-                        <h5 class="card-title">${property.fname}</h5>
-                        <div class="row">
-                            <p>${property.description}</p>
-                        </div>
-                        <a href="/real-estate-management-system/edit?id=${property.id}" class="btn btn-success">Edit</a>
-                         <a href="/real-estate-management-system/property-item-admin?id=${property.id}" class="btn btn-primary">View more</a>
-                         <a href="/real-estate-management-system/delete?id=${property.id}" class="btn btn-danger">Delete</a>
-                    </div>
-                </div>
-            </div>
-        </c:forEach>
-    </div>
+    <!-- Display property details -->
     
-   
+    <!-- Display other property details here -->
+    
+    <!--image start-->
+<h1 style="margin-left: 20px; text-align: center;"> Property Details</h1> 
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12"> <!-- Change col-10 to col-12 to use the full width of the container -->
+      <img style="width: 95%; height: 800px; margin-top: 40px; margin-left: 40px; margin-right: 40px;" src="${property.image}" class="img-fluid" alt="Property Image">
+    </div>
+  </div>
 </div>
-  
+<br><br>
+<!--image end-->
 
-<!--buildings end-->
+    
+<!--property details-->
+<div class="container">
+  <div class="row justify-content-center"> <!-- Center the content horizontally -->
+    <div class="col-md-8">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">Property Details</h5><br>
+          <p class="card-text">${property.description}</p></div>
+      </div><br>
+      <div class="card">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card-body" >
+              <h4 class="card-title" style="text-align: center;">AGENT INFORMATION</h4><br>
+              <h5 class="card-text" style="text-align: center;">Contact the agent for more details</h5><br><br>
+              <p class="card-text" style="text-align: center;">Name: ${property.fname} ${property.lname}</p>
+              <p class="card-text" style="text-align: center;">Contact Number: ${property.mobile}</p>
+              <p class="card-text" style="text-align: center;">Address: ${property.address}</p>
+              <p class="card-text"style="text-align: center;">Email: ${property.email}</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img style="width: 350px; height: 400px; padding:20px; margin-left: 5%;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Unknown_person.jpg/925px-Unknown_person.jpg" class="img-fluid" alt="Agent Image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!-- Footer -->
+  <br><br>
+<!--end properry details-->
+
+ <!-- Footer -->
 <footer class="footer">
   <div class="container py-4">
     <div class="row">
@@ -220,7 +203,14 @@
     &copy; Copyright EstateMatrix All Right Reserved.
   </div>
 </footer>
+    
 
-<!-- end Footer-->
+    <%
+        } else {
+    %>
+    <p>Invalid property ID.</p>
+    <%
+        }
+    %>
 </body>
 </html>

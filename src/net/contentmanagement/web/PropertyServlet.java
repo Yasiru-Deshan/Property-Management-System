@@ -56,8 +56,14 @@ public class PropertyServlet extends HttpServlet {
                 case "/property-item":
                 	getProperty(request, response);
                 	break;
+                case "/property-item-admin":
+                	getPropertyAdmin(request, response);
+                	break;	
                 case "/search":
                 	propertySearchServlet(request, response);
+                	break;
+                case "/agents":
+                	listAgents(request, response);
                 	break;
                 default:
                     listProperties(request, response);
@@ -141,6 +147,20 @@ public class PropertyServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
     
+    private void listAgents(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Retrieve list of properties from DAO
+        List<Property> propertyList = propertyDAO.selectAllProperties();
+
+        // Set property list in request attribute
+        request.setAttribute("propertyList", propertyList);
+
+        // Forward to the JSP for displaying the list
+        RequestDispatcher dispatcher = request.getRequestDispatcher("agents.jsp");
+        dispatcher.forward(request, response);
+    }
+    
+    
     private void listPropertiesByCategory(HttpServletRequest request, HttpServletResponse response, String category)
             throws ServletException, IOException {
         // Retrieve list of properties by category from DAO
@@ -174,6 +194,24 @@ public class PropertyServlet extends HttpServlet {
         }
     }
     
+    protected void getPropertyAdmin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Get the property ID from the request parameter
+        int id = Integer.parseInt(request.getParameter("id"));
+
+        // Retrieve the property using the DAO
+        Property property = propertyDAO.selectProperty(id);
+
+        if (property != null) {
+            // Set the property as an attribute in the request scope
+            request.setAttribute("property", property);
+
+            // Forward to a JSP page to display the property details
+            request.getRequestDispatcher("property-item-admin.jsp").forward(request, response);
+        } else {
+            // Property not found, redirect to an error page or handle accordingly
+            response.sendRedirect("Error.jsp");
+        }
+    }
    
         protected void propertySearchServlet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             String searchAddress = request.getParameter("address");

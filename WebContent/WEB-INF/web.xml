@@ -60,6 +60,10 @@
 </servlet-mapping>
 <servlet-mapping>
     <servlet-name>PropertyServlet</servlet-name>
+    <url-pattern>/agents</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>PropertyServlet</servlet-name>
     <url-pattern>/apartments</url-pattern>
 </servlet-mapping><servlet-mapping>
     <servlet-name>PropertyServlet</servlet-name>
@@ -72,6 +76,10 @@
 <servlet-mapping>
     <servlet-name>PropertyServlet</servlet-name>
     <url-pattern>/property-item</url-pattern>
+</servlet-mapping>
+<servlet-mapping>
+    <servlet-name>PropertyServlet</servlet-name>
+    <url-pattern>/property-item-admin</url-pattern>
 </servlet-mapping>
 <servlet-mapping>
     <servlet-name>PropertyServlet</servlet-name>
@@ -95,6 +103,15 @@
 <servlet-mapping>
     <servlet-name>UserServlet</servlet-name>
     <url-pattern>/services</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>ContactServlet</servlet-name>
+    <servlet-class>net.contactmanagement.web.ContactServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>ContactServlet</servlet-name>
+    <url-pattern>/send</url-pattern>
 </servlet-mapping>
 
 	<error-page>

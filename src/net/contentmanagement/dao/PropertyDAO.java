@@ -27,6 +27,7 @@ public class PropertyDAO {
     private static final String SELECT_LANDS = "SELECT * FROM properties WHERE category = 'Land'";
     private static final String DELETE_PROPERTIES_SQL = "DELETE FROM properties WHERE id = ?;";
     private static final String SEARCH_PROPERTY = "SELECT * FROM properties WHERE address LIKE ?";
+    private static final String SELECT_USERS = "SELECT fname, lname, email, mobile, nic, address FROM properties"; 
     private static final String UPDATE_PROPERTIES_SQL = "UPDATE properties SET fname = ?, lname = ?, email = ?, mobile = ?, nic = ?, category = ?, image = ?, address = ?, description = ? WHERE id = ?;";
 
     public PropertyDAO() {

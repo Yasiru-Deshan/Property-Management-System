@@ -53,73 +53,41 @@
   </div>
 </nav>
 
-<!--navigation bar end-->
-
-<!-- Slide start-->
-
-<c:choose>
-        <c:when test="${category == 'Apartment'}">
-         <center>   <h1>Apartments</h1>
-         
-<div class="carousel-inner">
-    <div class="carousel-item active">
-    <img style="height:600px;" src="https://www.phillyaptrentals.com/wp-content/uploads/2020/12/apartment-building-what-makes-good-apartment-building-scaled.jpg" class="d-block w-100" alt="Image 1">
-   
-</div></center>
-        </c:when>
-        <c:when test="${category == 'Building'}">
-         <center>    <h1>Buildings</h1>
-         
-<div class="carousel-inner">
-    <div class="carousel-item active">
-    <img style="height:600px;" src="https://www.shutterstock.com/image-photo/modern-city-illustration-isolated-white-260nw-1836519439.jpg" class="d-block w-100" alt="Image 1">
-   
-</div></center>
-        </c:when>
-        <c:when test="${category == 'Land'}">
-         <center>    <h1>Lands</h1>
-         <div class="carousel-inner">
-    <div class="carousel-item active">
-    <img style="height:600px;" src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFuZHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" class="d-block w-100" alt="Image 1">
-   
-</div></center>
-        </c:when>
-        <c:otherwise>
-          <center>   <h1>My Properties</h1></center>
-       
-        </c:otherwise>
-    </c:choose>
-
+ 
+  <center>   <h1>Agents List</h1></center>
 
 <div class="container">
 
 <center>
-
-  <form action="/real-estate-management-system/search" method="get" class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2 " type="search" placeholder="Search by Address" name="address" aria-label="Search">
-    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-</form></center>
-
-    <div style="margin-top: 40px; margin-bottom: 40px;" class="row">
-        <c:forEach var="property" items="${propertyList}">
-            <div class="col-md-4">
-                <div class="card" style="margin-top: 20px;">
-                    <img style="height: 250px;" src="${property.image}" class="card-img-top" alt="Property Image">
-                    <div class="card-body">
-                        <h5 class="card-title">${property.fname}</h5>
-                        <div class="row">
-                            <p>${property.description}</p>
-                        </div>
-                        <a href="/real-estate-management-system/edit?id=${property.id}" class="btn btn-success">Edit</a>
-                         <a href="/real-estate-management-system/property-item-admin?id=${property.id}" class="btn btn-primary">View more</a>
-                         <a href="/real-estate-management-system/delete?id=${property.id}" class="btn btn-danger">Delete</a>
-                    </div>
-                </div>
-            </div>
-        </c:forEach>
-    </div>
     
-   
+    <div>
+ 
+    <table class="table">
+  <thead>
+    <tr>
+      
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">NIC</th>
+      <th scope="col">Address</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+          <c:forEach var="property" items="${propertyList}">
+    <tr>
+      
+      <td>${property.fname} ${property.lname}</td>
+      <td>${property.email}</td>
+      <td>${property.mobile}</td>
+      <td>${property.nic}</td>
+      <td>${property.address}</td>
+    </tr>
+</c:forEach>
+  </tbody>
+</table>
+    </div>
 </div>
   
 

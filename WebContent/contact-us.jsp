@@ -18,7 +18,7 @@
 <body>
 
     <!--navigation bar-->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to right, #ffe000, #799f0c);">
+<nav class="navbar navbar-expand-lg navbar-dark" style=" background: linear-gradient(to left, #fdfc47, #24fe41);">
  
   <a class="navbar-brand" href="/real-estate-management-system/">EstateMatrix</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,9 +33,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="/real-estate-management-system/services">Services</a>
       </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/real-estate-management-system/new">Sell Now</a>
-      </li>
+    
       <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Properties
@@ -135,22 +133,22 @@
         <div style="border: black; border-radius: 10px;">
           <div class="card-body">
             <h5 class="card-title text-center mb-4">Contact For Any Inquaries</h5>
-            <form>
+            <form action="send" method="post">
               <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
               </div>
               <div class="mb-3">
                 <label for="subject" class="form-label">Subject</label>
-                <input type="text" class="form-control" id="subject" placeholder="Enter the subject">
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject">
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
               </div>
               <div class="text-center">
                 <button type="submit" style="border:1px solid  #b69b00; color: black; height: 40px; width: 50%;">Submit</button>
