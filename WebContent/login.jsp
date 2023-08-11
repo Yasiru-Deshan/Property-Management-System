@@ -113,7 +113,7 @@
   <div style="margin-top:70px; margin-bottom:60px; background-color:#E9EAED ;" class="col-4">
     <div style="margin-bottom: 50px;" class="container">
   <h2 style="padding:30px;" class="text-center mb-4">Log In</h2>
- <form action="add" method="post">
+ <form action="login" method="post">
 
     
    
@@ -132,9 +132,18 @@
    <br>
     <button style="background-color:#e2c313;" type="submit" class="btn btn-primary btn-block">Log In</button>
   </form>
- <a href="/real-estate-management-system/alogin">Log in as a admin</a>
+ <center>
+  <a href="/real-estate-management-system/alogin-page">Log in as admin</a></center>
+
 </div>
 
+<script>
+    // Check if there's an error message and show an alert
+    var error = "${error}";
+    if (error) {
+        alert(error);
+    }
+</script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
    
   </div>

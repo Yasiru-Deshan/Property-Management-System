@@ -20,16 +20,8 @@ public class UserDAO {
     private static final String SIGNUP = "INSERT INTO usersTable" +
             "  (firstName, email, password, role, address, phoneNumber ) VALUES "
             + " (?, ?, ?, ?, ?, ?);";
-
-    private static final String SELECT_PROPERTY_BY_ID = "SELECT fname, lname, email, mobile, nic, category, image, address, description FROM properties WHERE id =?";
-    private static final String SELECT_ALL_PROPERTIES = "SELECT * FROM properties";
-    private static final String SELECT_APARTMENTS = "SELECT * FROM properties WHERE category = 'Apartment'";
-    private static final String SELECT_BUILDINGS = "SELECT * FROM properties WHERE category = 'Building'";
-    private static final String SELECT_LANDS = "SELECT * FROM properties WHERE category = 'Land'";
-    private static final String DELETE_PROPERTIES_SQL = "DELETE FROM properties WHERE id = ?;";
-    private static final String SEARCH_PROPERTY = "SELECT * FROM properties WHERE address LIKE ?";
-    private static final String UPDATE_PROPERTIES_SQL = "UPDATE properties SET fname = ?, lname = ?, email = ?, mobile = ?, nic = ?, category = ?, image = ?, address = ?, description = ? WHERE id = ?;";
-
+    private static final String LOGIN = "SELECT * FROM usersTable WHERE email = ? AND password = ?";
+    
     public UserDAO() {
     }
 
@@ -61,6 +53,32 @@ public class UserDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+    
+    public User getUserByEmailAndPassword(String email, String password) {
+        String query = LOGIN;
+        try (Connection connection = getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1, email);
+            preparedStatement.setString(2, password);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                
+                int id = resultSet.getInt("id");
+                String firstName = resultSet.getString("firstName");
+                
+                String role = resultSet.getString("role");
+                String address = resultSet.getString("address");
+                String phoneNumber = resultSet.getString("phoneNumber");
+
+                // Construct and return a User object
+                return new User(id, firstName, email, password, "user", address, phoneNumber, null);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null; // User not found
     }
      
     

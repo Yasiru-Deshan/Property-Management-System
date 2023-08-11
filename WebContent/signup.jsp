@@ -146,8 +146,10 @@
     </div> 
     
    <br>
-    <button style="background-color:#e2c313;" type="submit" class="btn btn-primary btn-block">Sign In</button>
+    <button style="background-color:#e2c313;" type="submit" class="btn btn-primary btn-block">Sign Up</button>
   </form>
+  
+  <center><p>Already have an account?<a href="/real-estate-management-system/login">Log In</a> </p></center>
 
 </div>
 

@@ -114,7 +114,7 @@
         <a class="nav-link" href="/real-estate-management-system/agents">Agents</a>
       </li>
     </ul>
-   <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Logout</button>
+   <a class="btn btn-outline-light my-2 my-sm-0" href="/real-estate-management-system/alogin-page">Logout</a>
   </div>
 </nav>
 

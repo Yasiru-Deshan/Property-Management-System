@@ -31,6 +31,16 @@
     <url-pattern>/alogin</url-pattern>
 </servlet-mapping>
 
+<servlet-mapping>
+    <servlet-name>UsersServlet</servlet-name>
+    <url-pattern>/login-page</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>UsersServlet</servlet-name>
+    <url-pattern>/alogin-page</url-pattern>
+</servlet-mapping>
+
 	<servlet>
     <servlet-name>HomeServlet</servlet-name>
     <servlet-class>net.contentmanagement.web.HomeServlet</servlet-class>

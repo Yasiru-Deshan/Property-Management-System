@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import net.contentmanagement.dao.PropertyDAO;
 import net.contentmanagement.model.Property;
@@ -45,10 +46,14 @@ public class UsersServlet extends HttpServlet {
                     break;
                 case "/add":
                 	insertUser(request, response);
-                case "/login":
+                case "/login-page":
                 	loginPage(request, response);
-                case "/alogin":
+                case "/alogin-page":
                 	adminLoginPage(request, response);
+                case "/login":
+                	login(request, response);
+                case "/login-admin":
+                	adminLogin(request, response);
                 default:
                     
                     break;
@@ -91,6 +96,47 @@ public class UsersServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
 	
+	protected void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+
+        // Call the DAO to get the user based on email and password
+        User user = userDAO.getUserByEmailAndPassword(email, password);
+
+        if (user != null) {
+            // Successful login
+            HttpSession session = request.getSession();
+            session.setAttribute("user", user);
+
+            // Redirect to the user's dashboard or homepage
+            response.sendRedirect("home-page.jsp"); // Change this to the appropriate URL
+        } else {
+            // Invalid login
+            request.setAttribute("error", "Invalid email or password");
+            request.getRequestDispatcher("/login.jsp").forward(request, response);
+        }
+    }
+	
+	protected void adminLogin(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+
+        // Call the DAO to get the user based on email and password
+        User user = userDAO.getUserByEmailAndPassword(email, password);
+
+        if (user != null) {
+            // Successful login
+            HttpSession session = request.getSession();
+            session.setAttribute("user", user);
+
+            // Redirect to the user's dashboard or homepage
+            response.sendRedirect("/real-estate-management-system/list"); // Change this to the appropriate URL
+        } else {
+            // Invalid login
+            request.setAttribute("error", "Invalid email or password");
+            request.getRequestDispatcher("/login-admin.jsp").forward(request, response);
+        }
+    }
 	
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
